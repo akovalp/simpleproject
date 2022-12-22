@@ -1,0 +1,36 @@
+{%extends 'base.html'%} {%block content%}
+<style>
+    body {
+      padding: 10px;
+    }
+  </style>
+
+  
+      <h1>Here is a table for all of the active users</h1>
+
+      <table class="table">
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Surname</th>
+          <th>Birthday</th>
+          <th>Email</th>
+        </tr>
+        {% for user in all_users %}
+        <!-- Create a list with user name surname and birth year -->
+        <tr>
+        <td>{{user.id}}</td>
+          <td>{{user.name}}</td>
+          <td>{{user.surname}}</td>
+          <td>{{user.birthday}}</td>
+        <td>{{user.email}}</td>
+        </tr>
+
+      
+        {% endfor %}
+      </table>
+     
+   
+
+   
+{%endblock%}
