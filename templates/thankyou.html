@@ -5,12 +5,13 @@
     }
   </style>
 
-  <div class="jumbotron">
+  <div class="container-fluid p-3 my-3 bg-dark text-white">
     <h1>Thank you for your submission {{name}} {{surname}}!</h1>
-
-     
-
-    <h3>Is the email adres you provided correct: {{email}}</h3>
+    <h2>Name: {{name}}</h2>
+    <h2>Surname: {{surname}}</h2>
+    <h2>Birth Year: {{birthday}}</h2>
+    <h2>Email: {{email}}</h2>
+    <h2>Password: {{password}}</h2>
   <a href="{{url_for('page')}}"><button class="btn btn-primary">Go back</button></a>
   </div>
      

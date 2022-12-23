@@ -1,12 +1,8 @@
 {%extends 'base.html'%} {%block content%}
-<style>
-    body {
-      padding: 10px;
-    }
-  </style>
 
   
       <h1>Here is a table for all of the active users</h1>
+      <p>You can either reach this database by clicking on the Active users tab or you can go to login page and with successful login attempt you will be redirected here</p>
 
       <table class="table">
         <tr>
@@ -15,6 +11,7 @@
           <th>Surname</th>
           <th>Birthday</th>
           <th>Email</th>
+          <th>Password</th>
         </tr>
         {% for user in all_users %}
         <!-- Create a list with user name surname and birth year -->
@@ -24,6 +21,7 @@
           <td>{{user.surname}}</td>
           <td>{{user.birthday}}</td>
         <td>{{user.email}}</td>
+        <td>{{user.password}}</td>
         </tr>
 
       
