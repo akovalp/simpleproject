@@ -6,7 +6,7 @@ from app import db, User
 from faker import Faker
 
 fake = Faker()
-for i in range(100):
+for i in range(500):
     new_user = User(name=fake.name(), surname=fake.name(), birthday=fake.date(), email=fake.email(), password=fake.password())
     db.session.add(new_user)
     db.session.commit()
